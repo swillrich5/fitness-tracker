@@ -21,9 +21,7 @@ async function initExercise() {
   let workout;
 
   if (location.search.split("=")[1] === undefined) {
-    alert("I'm fixing to run createWorkout()");
     workout = await API.createWorkout();
-    alert("Workout = \n" + workout);
   }
   if (workout) {
     location.search = "?id=" + workout._id;
@@ -142,14 +140,12 @@ if (workoutTypeSelect) {
   workoutTypeSelect.addEventListener("change", handleWorkoutTypeChange);
 }
 if (completeButton) {
-  console.log("I'm in completeButton");
   completeButton.addEventListener("click", function (event) {
     shouldNavigateAway = true;
     handleFormSubmit(event);
   });
 }
 if (addButton) {
-  console.log("I'm in addButton");
   addButton.addEventListener("click", handleFormSubmit);
 }
 toast.addEventListener("animationend", handleToastAnimationEnd);
