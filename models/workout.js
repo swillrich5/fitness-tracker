@@ -43,32 +43,7 @@ const WorkoutSchema = new Schema({
 
 });
 
-WorkoutSchema.methods.getTotalDuration = function() {
-  for (var i = 0; i < this.exercises.length; i++) {
-    this.totalDuration += this.exercises[i].duration;
-  }
-  return this.totalDuration;
-}
-
-WorkoutSchema.methods.getTotalWeight = function() {
-  for (var i = 0; i < this.exercises.length; i++) {
-    if (this.exercises[i].type === "resistance") {
-      this.totalWeight += (this.exercises[i].weight * this.exercises[i].reps);
-    }
-  }
-  return this.totalWeight;
-}
-
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
-
-// Workout.aggregate([
-//   {
-//     $addFields: { 
-//       totalDuration: { $sum: "$exercises.duration" },
-//       totalWeight: { $sum: "$exercises.weight" }
-//     }
-//   }
-// ])
 
 module.exports = Workout;

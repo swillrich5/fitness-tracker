@@ -96,11 +96,6 @@ router.put("/api/workouts", (req, res) => {
 
 
 router.put("/api/workouts/:id", (req, res) => {
-    let exercise = req.body;
-
-    console.log("======>>>>>> req.body <<<<<=========");
-    console.log(req.body);
-    console.log("======>>>>>> req.body <<<<<=========");
     Workout.findByIdAndUpdate( 
         req.params.id,
         { 
