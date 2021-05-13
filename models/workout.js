@@ -20,6 +20,10 @@ const WorkoutSchema = new Schema({
               type: Number,
               unique: false
             },
+            distance: {
+              type: Number,
+              unique: false,
+            },
             weight: {
               type: Number,
               unique: false
