@@ -64,6 +64,14 @@ router.get("/api/workouts", (req, res) => {
     console.log("I'm in GET /api/workouts");
     Workout.find().sort({day: 1})
     .then(workout => {
+        // db.workout.aggregate([
+        //     {
+        //         $addFields: {
+        //             totalDuration: { $sum : "$exercises.duration" },
+        //             totalWeight: { $sum: "$exercises.weight" }
+        //         }
+        //     }
+        // ]);
         res.json(workout);
         // res.redirect("exercise.html");
     })
