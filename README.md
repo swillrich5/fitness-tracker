@@ -2,19 +2,19 @@
 
 ## Description
 
-techno-blog is a web-based application that allows users to read technical blog posts from other users, comment on them, and post their own blog entries.
+fitness-tracker is a application that allows the user to track daily workouts by logging their cardio (running, jogging, etc.) and resistance (weight lifting) workouts.  Totals for the most recent workout are displayed.  Statistics for the past seven workouts are graphed.
 
 ---
 
 ## Deployed Application
 
-https://boiling-hamlet-77831.herokuapp.com/
+https://secure-crag-36323.herokuapp.com/
 
 ---
 
 ## GitHub Repository
 
-https://github.com/swillrich5/techno-blog
+https://github.com/swillrich5/fitness-tracker
 
 ---
 
@@ -25,6 +25,8 @@ https://github.com/swillrich5/techno-blog
 * [Usage](#usage)
 
 * [Technology](#technology)
+
+* [Application Images](#Application-Images)
 
 * [License](#license)
 
@@ -42,7 +44,7 @@ If you wish to run your own copy of the application, install the required node m
 npm i
 ```
 
-In addition, database tables can be created using the table creation scripts in ``` schema.sql ```.  The database can be seeded with data by running ``` npm run seed ```.  Please be sure to create the ```.env ```  file and include the DB_USER, DB_PASSWORD, and DB_NAME variables.
+In addition, the workout database and workouts collection can be created and seeded with data by running ``` npm run seed ```.  
 
 ---
 
@@ -61,27 +63,30 @@ from the command line.
 
 The following technology was used to build note-taker:
 
-  * bcrypt - https://www.npmjs.com/package/bcrypt
-
-  * connect-session-sequelize - https://www.npmjs.com/package/connect-session-sequelize
-
-  * dotenv - https://www.npmjs.com/package/dotenv 
-
   * express - https://www.npmjs.com/package/express
 
-  * express-session - https://www.npmjs.com/package/express-session
+  * mongodb - https://www.mongodb.com/
 
-  * handlebars - https://www.npmjs.com/package/handlebars
+  * mongoose - https://mongoosejs.com/
 
-  * inquirer - https://www.npmjs.com/package/inquirer 
-
-  * mysql2 -  https://www.npmjs.com/package/mysql2
+  * morgan - https://www.npmjs.com/package/morgan
 
   * node - https://nodejs.org/en/
 
-  * sequelize - https://www.npmjs.com/package/sequelize 
+---
+
+## Application-Images
+![Starting Screen](./images/fitness-tracker-load-screen.png "Starting Screen")
+Starting Screen
+
+![Add Workout](./images/fitness-tracker-add-workout.png "Add Workout")
+Add Workout 
+
+![Dashboard](./images/fitness-tracker-dashboard.png "Dashboard")
+Dashboard 
 
 ---
+
 
 ## License
 
