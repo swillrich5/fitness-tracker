@@ -1,4 +1,4 @@
-# techno-blog
+# fitness-tracker
 
 ## Description
 
