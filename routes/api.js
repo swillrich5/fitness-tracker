@@ -88,6 +88,7 @@ router.put("/api/workouts", (req, res) => {
         res.json(workout);
     })
     .catch(err => {
+        alert(err);
         res.status(400).json(err);
     });
 });
